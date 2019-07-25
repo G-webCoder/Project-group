@@ -1,0 +1,11 @@
+<!--miniprogram/pages/common/common.wxml-->
+<!--添加桌面-->
+<template name='addDesktop'>
+    <view class='addDesktop-wrap'>
+        <text>添加到桌面，更方便找到我！</text>
+    </view>
+</template>
+<!--表情发送-->
+<template name='mbLogincheck'>
+    
+</template>

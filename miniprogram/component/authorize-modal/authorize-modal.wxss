@@ -1,0 +1,57 @@
+/* component/btn-modal/btn-modal.wxss */
+.login-mask{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  background-color: rgba(0,0,0,.5);
+}
+.loginwin-wrap{
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.loginwin-cont{
+  width: 450rpx;
+  margin: 0 auto;
+  padding:10px 15px;
+}
+.loginwin-title,.loginwin-descable{
+  text-align: center;
+}
+.loginwin-descable{
+  font-size: 0;
+  margin: 5px 0;
+}
+.loginwin-title text{
+  font-weight: 700;
+}
+.loginwin-descable text{
+  display: block;
+  font-size: 10px;
+  color: #b4b2b3;
+}
+.btn-wrap{
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding-top: 5px;
+}
+.btn-wrap text{
+  font-size: 13px;
+}
+.sure,.cancel{
+  flex: 1;
+  height: 18px;
+  text-align: center;
+  font-size: 0;
+}
+.cancel{
+  border-right: 1px solid #b4b2b3;
+}
+.sure text{
+  color: #fe8d55;
+}

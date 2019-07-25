@@ -1,0 +1,65 @@
+<!--miniprogram/component/comment/comment.wxml-->
+<!---评论组件--comment-->
+<authorize-modal  id='authorize-modal' bind:authorizeUserInfo='getUserInfo' />
+<view class="comment-wrap">
+    <!--评论显示列表-->
+      <view class='comment-list' wx:for='{{ratings}}' wx:for-item='commentItem' wx:for-index='commentIndex'>
+          <view class='list-top'>
+              <view class="list-top-l" bindlongtap="LongtapreplayFun" data-userinfo='{{commentItem}}' data-commentIndex='{{commentIndex}}' >
+                  <view class='avatar'>
+                    <image src='{{commentItem.userinfo.avatarUrl}}'></image>
+                  </view>
+                  <view class='right'>
+                    <text class='name'>{{commentItem.userinfo.nickName}}</text>
+                    <text class='timer'>{{commentItem.timer}}</text>
+                  </view>
+              </view>
+              
+          </view>
+          <view class='list-cont'>
+              <text>{{commentItem.content}}</text>
+              <view class="replay-wrap"  wx:if='{{commentItem.replays.length != null}}'>
+                <view class="replayList" wx:for='{{commentItem.replays}}'wx:for-item='replaysItem'>
+                  <text class="replay-nickname" bindlongtap="LongtapreplayFun" data-userinfo='{{replaysItem.userinfo}}' data-commentIndex='{{commentIndex}}'>{{replaysItem.userinfo.nickName}}：</text>
+                  <text class="replay-cont">{{replaysItem.content}}</text>
+                </view>
+              </view>
+          </view>
+      </view>
+    </view>
+    <!--评论输入框-->
+    <view class="commenr-contInp" wx:if='{{isInpArea}}'>
+      <view class="return" bindtap="bindBackFun">
+        <i-icon class="icon" size="20"  type="return" />
+      </view>
+      <view class="inp-frame" bindtap="openEditText">
+        <text class="point">{{upReplaypeople==null?isLoginPoint:upReplaypeople}}</text>
+      </view>
+      <view class="message">
+        <i-icon class="icon" size="20" type="message" />
+        <text class="r-num">{{ratings.length}}</text>
+      </view>
+      <view class="praise" bindtap="PraiseFun">
+        <i-icon class="icon" size="20"  type="praise"  type="{{ispraise?'praise_fill':'praise'}}" color="{{ispraise?'#fe8d55':''}}" />
+        <text class="r-num">{{praisenum}}</text>
+      </view>
+      <view class="collection">
+        <i-icon class="icon" bindtap="CollectionFun" size="20"  type="{{iscollection?'collection_fill':'collection'}}" color="{{iscollection?'#fe8d55':''}}" />
+      </view>
+    </view>
+    <!---编辑器--->
+    <view class="edit-wrap" wx:if='{{isEditArea}}'>
+      <view class="edit-top-btn">
+        <text class="cancel" bindtap="CancelBtnfun">取消</text>
+        <text class="cent-title">{{upReplaypeople==null?'文章评论中...':upReplaypeople}}</text>
+        <text class="sure" bindtap="SureBtnfun">发布</text>
+      </view>
+      <view class="inp-numer-point">
+        <text class="point-number">
+          <text class="point-number {{(inpnumer>=200)?'point-active':''}}">{{inpnumer}}</text>/200
+        </text>
+       </view>
+        <view class="inp-edit-wrap">
+          <textarea class="inpText" maxlength='200' type="text" auto-focus="true"  cursor-spacing="10px" fixed="true" bindinput="InpEditblur" show-confirm-bar="{{false}}" adjust-position='true' placeholder="{{upReplaypeople==null?'请输入评论':'请回复'}}" value=""  ></textarea>
+        </view>
+</view>

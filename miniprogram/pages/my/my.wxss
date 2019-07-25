@@ -1,0 +1,121 @@
+/* miniprogram/pages/my/my.wxss */
+@import '../common/common.wxss';
+.my-topwrap{
+  width: 100%;
+}
+.top-bg{
+  height: 85px;
+  background-color: #fe8d55;
+}
+.top-perInfo{
+  padding-bottom: 0px;
+  margin-top: -75px;
+}
+.perInfo-cont{
+  display: flex;
+}
+.avatar{
+  flex: 0 0 75px;
+  width: 75px;
+  height: 75px;
+  border-radius: 8px;
+}
+.lisnew{
+  flex: 1;
+  margin-left: 15px;
+}
+.newItem{
+  margin-bottom: 5px;
+}
+.newText{
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 5px;
+  color: rgb(73, 73, 73);
+}
+.icon-edit{
+  margin-left: 3px;
+}
+
+.rwrad-wrap{
+  display: flex;
+  padding: 20px 0;
+  border-top: 1px solid #e9eaec;
+  margin-top: 15px;
+}
+.integral,.shopmall{
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.integral{
+  border-right: 1px solid #e9eaec;
+}
+.rwrad-cont{
+  display: inline-block;
+}
+.rwrad-icon,.rwrad-text{
+  display: inline-block;
+  font-size: 0px;
+  text-align: left;
+  vertical-align: top;
+}
+.rwrad-text{
+  margin-left: 8px;
+}
+.rwrad-text text{
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #b4b2b3;
+}
+.rwrad-text text.rwrad-title{
+  font-size: 13px;
+  line-height: 13px;
+  color: rgb(73, 73, 73);
+  margin-bottom: 8px;
+}
+.everyday-wrap{
+  padding: 20px 10px;
+}
+.everyday-btn{
+  width: 84px;
+  margin: 0 auto 10px;
+  text-align: center;
+  padding: 3px 0;
+  background-color: #fe8d55;
+  border-radius: 20px;
+}
+.everyday-btn text{
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+}
+.everyday-cont text{
+  display: block;
+  font-size: 14px;
+  color: rgb(73, 73, 73);
+}
+.cont-author{
+  text-align: right;
+  padding-top:10px; 
+}
+.fun-list{
+  padding: 0px 10px;
+}
+.list{
+  padding: 15px 0;
+  border-bottom:1px solid #e9eaec;
+}
+.fun-list .list:last-of-type{
+  border: 1px solid transparent;
+}
+.contact-btn{
+  display: block;
+}
+.lis-text{
+  float:left;
+  font-size: 13px;
+}
+.enter{
+  float:right;
+}

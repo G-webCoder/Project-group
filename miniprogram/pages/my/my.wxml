@@ -1,0 +1,94 @@
+<!--name: 萌校宝
+    author：一点新作
+    page: my.wxml
+-->
+<view class='container'>
+  <authorize-modal id='authorize-modal' bind:authorizeUserInfo='getUserInfo' />
+  <view class='my-topwrap'>
+    <view class='top-bg'></view>
+    <view class='top-perInfo wrap'>
+      <view class='perInfo-cont'>
+        <view class='avatar'>
+          <image src='{{userInfo.avatarUrl}}'></image>
+        </view>
+        <view class='lisnew'>
+          <view class='newItem'>
+            <i-icon type="mine_fill" size='20' color='#fea92c' />
+            <text class='newText'>昵称: {{userInfo.nickeName.value}}</text>
+            <inp-modal data-field='nickeName' test='text' inpValue='{{userInfo.nickeName}}' bind:upEditdata='upInpvalue' />
+          </view>
+          <view class='newItem'>
+            <i-icon type="businesscard_fill" size='20' color='#fea92c' />
+            <text class='newText'>班级: {{userInfo.userClass.value}}</text>
+            <i-icon type="lock" class='icon-edit' color='#b4b2b3' />
+          </view>
+          <view class='newItem'>
+            <i-icon type="mobilephone" size='20' color='#fea92c' />
+            <text class='newText' >电话: {{userInfo.userTel.value}}</text>
+            <inp-modal data-field='userTel' test='tel' bind:upEditdata='upInpvalue' inpValue='{{userInfo.userTel}}' />
+          </view>
+        </view>
+      </view>
+      <!--perInfo--end-->
+      <view class='rwrad-wrap'>
+        <view class='integral'>
+          <view class='rwrad-icon'>
+            <i-icon type="financial_fill" size='32' color='#fea92c' />
+          </view>
+          <view class='rwrad-text'>
+            <text class='rwrad-title'>萌分：32</text>
+            <text class='rwrad-deac'>已连续打卡21天</text>
+          </view>
+        </view>
+        <view class='shopmall'>
+          <view class='rwrad-cont'>
+            <view class='rwrad-icon'>
+              <i-icon type="shop_fill" size='32' color='#f50554' />
+            </view>
+            <view class='rwrad-text'>
+              <text class='rwrad-title'>奖品兑换</text>
+              <text class='rwrad-deac'>赞萌分换奖品</text>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--top--end-->
+  <view class='everyday-wrap wrap'>
+    <view class='everyday-btn'>
+      <text>每日一读</text>
+    </view>
+    <view class='everyday-cont'>
+      <text class='cont-text'>最好的默契就是懂你的言外之意，也懂你的欲言又止！</text>
+      <text class='cont-author'>—— 夜读</text>
+    </view>
+  </view>
+   <!--everyday--end-->
+   <view class='fun-list wrap'>
+      <view class='list clear'>
+        <text class='lis-text'>功能建议</text>
+        <i-icon type="enter" class='enter' color='#b4b2b3' />
+      </view>
+      <view class='list clear'>
+        <text class='lis-text'>意见反馈</text>
+        <i-icon type="enter" class='enter' color='#b4b2b3' />
+      </view>
+      <view class='list'>
+        <button class='contact-btn clear' open-type='contact'>
+          <text class='lis-text'>联系我们</text>
+          <i-icon type="enter" class='enter' color='#b4b2b3' />
+        </button>
+      </view>
+      <view class='list clear'>
+        <text class='lis-text'>邀请好友</text>
+        <i-icon type="enter" class='enter' color='#b4b2b3' />
+      </view>
+   </view>
+   <!--funList--end-->
+    <view class='mb-copy'>
+      <text>一点新作 | 技术支持</text>
+    </view>
+    
+</view>

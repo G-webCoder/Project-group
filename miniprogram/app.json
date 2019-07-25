@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/article/article",
+    "pages/trends/onlineLive/onlineLive",
+    "pages/trends/recommend/recommend",
+    "pages/addRelease/addRelease",
+    "pages/trends/trends",
+    "pages/my/my",
+    "pages/emojisend/emojisend",
+    "pages/userConsole/userConsole",
+    "pages/addFunction/addFunction",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/trends/tabDiary/tabDiary",
+    "pages/common/common",
+    "pages/details/details",
+    "pages/signUp/signUp",
+    "pages/course/course",
+    "component/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#fd8c55",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "fe8d55",
+    "navigationBarTitleText": "萌校宝",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于萌校宝小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#666",
+    "selectedColor": "#FF8247",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/bar-home-icon.png",
+        "selectedIconPath": "images/bar-home-active.png"
+      },
+      {
+        "pagePath": "pages/trends/trends",
+        "text": "动态",
+        "iconPath": "images/bar-find-icon.png",
+        "selectedIconPath": "images/bar-find-active.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "images/bar-course-icon.png",
+        "selectedIconPath": "images/bar-course-active.png"
+      },
+      {
+        "pagePath": "pages/addRelease/addRelease",
+        "text": "发布",
+        "iconPath": "images/bar-addrele-icon.png",
+        "selectedIconPath": "images/bar-addrele-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/bar-my-icon.png",
+        "selectedIconPath": "images/bar-my-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "authorize-modal":"../../component/authorize-modal/authorize-modal"
+  }
+}

@@ -1,0 +1,69 @@
+/* miniprogram/pages/index/tabThr/tabThr.wxss */
+.Like-mid-wrap{
+  width: 100%;
+  height: auto;
+  padding-top: 90rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.like-item{
+  padding: 0 10px 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius:5px; 
+}
+.like-item-top{
+  width: 100%;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.like-item-top::after{
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.item-top-avatar{
+  float: left;
+}
+.item-top-avatar image{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.item-top-nickname{
+  float: left;
+  line-height: 32px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.item-top-unfold{
+  float: right;
+}
+.Like-item-video video{
+  height: 165px;
+}
+.Like-item-img{
+  height: 280rpx;
+  max-height: 220px;
+}
+.Like-item-text{
+  padding: 5px 0px;
+}
+.Like-item-text text{
+    line-height: 18px;
+}
+.Like-item-inter{
+  display: flex;
+  align-items: center;
+}
+.Like-item-inter text{
+  font-size: 12px;
+  font-weight: 200;
+  margin-left: 3px;
+}
+.Like-item-inter>view{
+  flex: 1;
+}
+.icon{
+  height: 15px;
+}

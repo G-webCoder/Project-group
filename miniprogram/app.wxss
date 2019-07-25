@@ -1,0 +1,88 @@
+/**app.wxss**/
+/**--样式初始化--**/
+text{
+  font-size: 13px;
+  color: rgb(73, 73, 73);
+}
+button {
+  display: inline-block;
+  background: initial;
+  padding: 0px;
+  font-size: 12px;
+  line-height: initial;
+}
+.button-hover{
+  background-color: transparent;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+
+/**--样式公有化--**/
+page{
+  background-color:rgb(243, 242, 240);
+}
+.container {
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family:"微软雅黑 Light";
+  color:rgb(73, 73, 73);
+}
+.navigator-hover{
+  background: none;
+  background-color: transparent;
+}
+/*公用组件样式*/
+.wrap{
+  background-color:rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 10px;
+  margin:10px 10px 0;
+  border-radius:5px; 
+}
+.border-radius{
+  border-radius: 6px;
+}
+.text-ellipsis{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clamp-ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-clamp:2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.clear::after{
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.text-center{
+  text-align: center;
+}
+/*--author--*/
+.mb-copy{
+  padding: 15px 0 5px ;
+  text-align: center;
+}
+.mb-copy text{
+  font-size:12px;
+  font-weight: 200;
+  line-height: 18px;
+  color: #bdbcbc;
+}
+
+

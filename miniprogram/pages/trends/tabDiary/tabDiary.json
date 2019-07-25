@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 30,
+  "usingComponents": {
+    "i-icon": "../../../dist/icon/index"
+  }
+}

@@ -1,0 +1,50 @@
+<!--miniprogram/pages/article/article.wxml-->
+<view wx:if='{{articleData}}' >
+  <block  wx:for='{{articleData}}' wx:for-item="articleItem" wx:key='index'>
+  <navigator url="../details/details?field={{field}}&articleId={{index}}">
+  <view class='page-list-item wrap' data-articleId='{{articleItem.id}}'>
+      <view class='item-wrap'>
+          <view class='item-cont'>
+            <view class='item-title'>
+                <text class='title text-ellipsis'>{{articleItem.title}}</text>
+            </view>
+            <view class='item-oper'>
+                <view class='oper timer'>
+                    <i-icon type="time" size='14' />
+                    <text>{{articleItem.releasetime}}</text>
+                </view>
+                <view class='oper'>
+                    <i-icon type="browse" size='14' />
+                    <text>{{articleItem.praisenumber}}</text>
+                </view>
+                <view class='oper'>
+                    <i-icon type="message" size='14' />
+                    <text>{{articleItem.readnumber}}</text>
+                </view>
+            </view>
+            <view class='descable'>
+                <text>{{articleItem.abstract}}</text>
+            </view>
+          </view>
+          <view class='item-thumb' wx:if='{{articleItem.thumbImg.length==1}}'>
+              <image mode="widthFix" src='{{articleItem.thumbImg[0]}}'></image>
+          </view>
+    </view>
+    <!--图片三栏布局-->
+    <view class='list-img' wx:if='{{articleItem.thumbImg.length==3}}'>
+          <view class='img-wrap'>
+              <block wx:for='{{articleItem.thumbImg}}' wx:for-item="imgurl" wx:key='imgId'>
+                  <view class='img'>
+                    <image mode="widthFix" src='{{imgurl}}'></image>
+                  </view>
+              </block>
+          </view>
+    </view>
+  </view>
+  </navigator>
+  </block>
+</view>
+<view class="wrap text-center" wx:else>
+  <text>嚯~ 暂无文章</text>
+</view>
+

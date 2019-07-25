@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 30,
+  "usingComponents": {
+    "tabDiary": "tabDiary/tabDiary",
+    "tabThr": "recommend/recommend",
+    "tabFour": "onlineLive/onlineLive"
+  }
+}

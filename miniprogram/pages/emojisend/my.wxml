@@ -1,0 +1,17 @@
+<!--miniprogram/pages/my/my.wxml-->
+<view class='my-mid-wrap'>
+  <view class='value-wrap'>
+    <image src=''></image>
+    {{inpemoji}}
+  </view>
+  <view class='send-cont'>
+    <input class='input-emjo' value='' ></input>
+    <view class='send-btn' bindtap='emojiSend'><text>发送</text></view>
+  </view>
+   
+   <view>
+      <view class='emoji_d' wx:for="{{emojiList}}" wx:key='key' data-item='{{item.tit}}' data-src='{{item.image}}' bindtap='emojiSend'>
+        <image src='{{item.image}}' data-src='{{item.image}}' data-title='{{item.tit}}'></image>
+      </view>
+   </view>
+</view> 

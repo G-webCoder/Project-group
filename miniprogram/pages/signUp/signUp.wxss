@@ -1,0 +1,102 @@
+/* pages/signUp/signUp.wxss */
+
+.banner-wrap image{
+  
+}
+.inpItem{
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.inpItem label,.inpItem input,.select,.inpItem button{
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.inpItem label{
+  width: 82px;
+  text-align: right;
+}
+.inpItem input,.select{
+  width: 352rpx;
+  max-width: 242px;
+  height: 22px;
+  min-height: 22px;
+  padding: 2px 5px;
+  border: 1px solid #e9eaec;
+  border-radius: 3px;
+  color: rgb(73, 73, 73);
+}
+.inpItem .placehholderStyle{
+  color: #b4b2b3;
+}
+.select{
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.select::after{
+  display: block;
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 0px;
+  height: 0px;
+  border:5px solid #fe8d55;
+  border-top-color:transparent ;
+  border-right-color:transparent;
+  transform-origin: 3px 8px; 
+  transition: all 0.5s;
+  transform: rotate(-45deg);
+}
+.selectValue{
+  line-height:24px;
+  color: #b4b2b3;
+}
+.list-cont{
+  width: 100%;
+  position: absolute;
+  top: 28px;
+  left: -1px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #e9eaec;
+  border-top: none;
+  border-radius: 3px;
+}
+.selectItem{
+  display: block;
+  padding:3px 5px;
+}
+.select-wrap .active::after{
+  transform: rotate(135deg);
+}
+.listActive{
+  background-color:#fe8d55;
+  color: white; 
+}
+.inpItem .signUp-btn{
+  width: 336rpx;
+  max-width: 242px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #fe8d55;
+  color: white;
+}
+
+.title{
+  font-weight: 700;
+}
+.cont text{
+  display: block;
+  font-size:12px;
+  line-height: 18px;
+}
+.descable{
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b4b2b3;
+  text-align: right;
+}

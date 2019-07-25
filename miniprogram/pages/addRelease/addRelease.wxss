@@ -1,0 +1,89 @@
+/* miniprogram/pages/addRelease/addRelease.wxss */
+.addrele-text,.select-video{
+    margin-bottom: 10px;
+}
+.addrele-Titletext{
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+.addrele-Titletext text{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.title-strong{
+  color: #FF8247;
+}
+.addrele-textarea{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+   border:1px solid #e9eaec;
+   border-radius: 5px;
+}
+.addrele-text text{
+  float: right;
+  font-size: 10px;
+}
+.addrele-text::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.point-strong{
+  color: #f00;
+  margin-right: 5px;
+}
+.select-video{
+    border:1px solid #e9eaec;
+    text-align: center;
+    border-radius: 5px;
+}
+.select-video text{
+  display: block;
+  padding: 5px;
+  text-align: left;
+}
+.select-title{
+  font-weight: 700;
+}
+.upload-show progress{
+    background-color: rgb(250, 245, 245);
+}
+.select-area text{
+  color: #ccc;
+  height: 284rpx;
+}
+.select-area{
+  background-color:rgb(252, 248, 248);
+  display: block;
+  height:auto;
+}
+.select-area video{
+  width: 100%;
+}
+.select-btn{
+  color: #FF8247;
+  line-height: 36px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px auto 5px auto;
+  padding: 0 10px;
+  text-align: center;
+  border: 1px solid #FF8247;
+}
+.submit-btn{
+  display: block;
+  background-color: #FF8247;
+  margin: 20px auto;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 60%;
+  height: 45px;
+  font-weight: 700;
+  white-space: 10px;
+  border-radius: 5px;
+  line-height: 45px;
+}

@@ -1,0 +1,62 @@
+/* miniprogram/pages/details/details.wxss */
+
+.details-title{
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+.details-funct{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.details-funct text{
+  font-size: 10px;
+}
+.author,.timer,.read{
+  flex: 1;
+}
+.details-cont{
+  font-size: 12px;
+  text-indent: 2em;
+  margin-top: 10px;
+}
+.details-cont text,.details-bottom text{
+  font-size: 12px;
+  line-height: 18px;
+}
+.details-cont image{
+  margin: 5px 0;
+}
+.details-bottom{
+  text-align: right;
+  padding-top: 10px;
+}
+.comment-title{
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+.list-top{
+  font-size: 0;
+}
+.avatar{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.avatar,.right{
+  display: inline-block;
+  vertical-align: middle;
+}
+right .name{
+  font-weight: 700;
+}
+.right .timer{
+  margin-left: 10px;
+}
+.list-cont{
+  padding: 10px 0 20px;
+}
+.right text,.list-cont text{
+  font-size: 12px;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "config":"../config/config",
+    "i-toast": "../../dist/toast/index"
+  }
+}

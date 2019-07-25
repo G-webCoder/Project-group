@@ -1,0 +1,26 @@
+<!--component/modal/modal.wxml-->
+<!---模态弹窗自定义输入内容--->
+<i-icon type="editor" bindtap="InfoEdit" class='icon-edit' color='#b4b2b3' />
+<view class="modal-mask" wx:if='{{isModalshow}}'>
+    <view class="modal-block">
+        <view class="modal-title">
+            <text>提示</text>
+        </view>
+        <view class="modal-cont">
+            <view class="left-text">
+                <text>{{inpValue.title}}:</text>
+            </view>
+            <view class="inp-wrap">
+                <input class="inp" type="{{test=='tel'?'number':'text'}}" focus="{{inputFocus}}"  bindinput="InpblurFun" placeholder-class="inp-holder" value="{{inpValue.value}}" placeholder="请输入{{inpValue.title}}"></input>
+            </view>
+        </view>
+        <view class="modal-oper">
+            <view class="cancel" bindtap="ModealcancelFun">
+                <text>取消</text>
+            </view>
+            <view class="sure" bindtap="ModealsureFun">
+                <text>确定</text>
+            </view>
+        </view>
+    </view>
+</view>

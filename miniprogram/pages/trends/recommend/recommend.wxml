@@ -1,0 +1,53 @@
+<!--miniprogram/pages/index/recommend/recommend.wxml-->
+<view class='Like-mid-wrap'>
+  <view class='like-item wrap'>
+      <view class='like-item-top'>
+          <view class='item-top-avatar'>
+              <image src='../../../images/20190427_avatar.jpeg'></image>
+          </view>
+          <view class='item-top-nickname'>
+              <text>少儿官方媒体</text>
+          </view>
+          <view class='item-top-unfold'>
+              <i-icon type="unfold" color='#b4b2b3' />
+          </view>
+      </view>
+      <view class='Like-item-text'>
+          <text>少壮不努力，老大徒伤悲</text>
+      </view>
+      <view class='Like-item-video'>
+          <video src=''></video>
+      </view>
+      <view class='Like-item-inter'>
+          <view>
+            <i-icon class='icon' type="praise" /><text>36</text> 
+          </view>
+          <view>
+            <i-icon class='icon' type="browse" /><text>5</text> 
+          </view>
+          <view>
+            <i-icon class='icon' type="message" /><text>68</text> 
+          </view>
+          <view>
+            <i-icon class='icon' type="send" /><text>3</text>
+          </view>
+      </view>
+  </view>
+
+  <view class='like-item wrap'>
+      <view class='like-item-top'>
+          <view class='item-top-avatar'>
+              <image src='../../../images/20190427_avatar.jpeg'></image>
+          </view>
+          <view class='item-top-nickname'>
+              <text>少儿官方媒体</text>
+          </view>
+      </view>
+      <view class='Like-item-text'>
+          <text>点击参加夏季游学哦，这个夏天让我们一起在游玩中涨知识！</text>
+      </view>
+      <view class='Like-item-img'>
+          <image mode="widthFix" src='../../../images/201903010000001145.jpg'></image>
+      </view>
+  </view>
+</view>

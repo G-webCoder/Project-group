@@ -1,0 +1,264 @@
+<!--index.wxml--一点新作开发-萌校宝--->
+<!--首页-->
+<!--authorize-modal id='authorize-modal'  /index不开启授权-->
+<mb-datarequest id='mb-datarequest' bind:requestEvent='onRequestEvent' />
+<view class='container'>
+    <!---banner--->
+    <view class='mb-banner'>
+      <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"  easing-function="{{easingFunction}}" indicator-color='{{indicatorColor}}' indicator-active-color='{{indicatorActive}}'>
+        <swiper-item wx:for="{{mbData.schoolInfo.bannerImg}}" wx:for-item='bannerItem'>
+          <image src="{{bannerItem}}" class="slide-image" width="100%" height="100%"/>
+        </swiper-item>
+      </swiper>
+    </view>
+    <i-notice-bar icon="systemprompt" background-color='#fff' closable >2019年萌校宝,将于6月24日至7月15日开启全测！
+    </i-notice-bar>
+    <!--萌校宝-栏目-->
+    <view class='mb-column'>
+      <navigator class='colum-list' wx:for='{{mbData.cloumList}}' wx:for-item='colum' wx:key='key'  data-columUrl='{{colum.pageNavurl}}' url='{{colum.pageNavurl}}' open-type="{{colum.istabBar?'switchTab':'navigateTo'}}" >
+        <view class='icon'>
+          <image src='{{colum.iconUrl}}'></image>
+        </view>
+        <text>{{colum.cloumName}}</text>
+      </navigator>
+    </view>
+    <!--活动预约-报名版块-->
+    <view class='mb-activity'>
+      <view class='activity-null'></view>
+      <view class='activity-wrap border-radius'>
+        <block wx:for='{{mbData.activity}}' wx:for-item='activityItem' wx:if='{{activityItem.type == -1}}'>
+        <navigator  url='../signUp/signUp?field=activity&&id={{index}}'  wx:if='{{activityItem}}'>
+          <view class='activity-cont'>
+            <view class='left-image'>
+              <image src='{{activityItem.coverimage}}' class='border-radius'></image>
+            </view>
+            <view class='right-describle'>
+              <view class='describle-title'>
+                <text class='title text-ellipsis'>{{activityItem.title}}</text>
+              </view>
+              <view class='describle-cont'>
+                <text>{{activityItem.describe}}</text>
+              </view>
+              <view class='describle-detail'>
+                <text>{{activityItem.startTime}}至{{activityItem.endTime}}</text>
+                <text class=' ' wx:if='{{activityItem.tag}}'>{{activityItem.tag}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+        <view wx:else>
+            <text>暂无活动</text>
+        </view>
+        <view class='activity-enroll clear'>
+          <view class='enroll-loacll'>
+            <i-icon type="coordinates" />
+            <text class='locall-text'>{{activityItem.address}}</text>
+          </view>
+          <view class='enroll-btn'>
+                <navigator wx:if='{{mbData.activity}}' url='../signUp/signUp?field=activity&&id={{index}}' >
+                  <text class='btn-text'>参加报名</text>
+                </navigator>
+                <text class="btn-text" wx:else >活动未开始</text>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+    <!--活动预约--end-->
+    <view class='mb-recommend mb-block border-radius'>
+      <view class='block-top clear'>
+        <text class='block-title'>课程推荐</text>
+        <navigator class='more' url="../course/course" open-type='switchTab'>
+          <text >查看更多></text>
+        </navigator>
+      </view>
+      <view class='recom-cont'>
+         <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="5500" duration="{{duration}}" circular="{{circular}}"  easing-function="{{easingFunction}}" indicator-color='rgb(238,238,238)' indicator-active-color='{{indicatorActive}}'>
+        <swiper-item wx:for="{{imgUrls}}">
+        
+          <view class='recom-wrap'>
+            <view class='recom-item'>
+              <view class='recom-item-img'>
+                <image src="https://www.z4a.net/images/2019/06/10/356.jpg" class="slide-image" width="100%" height="100%"/>
+              </view>
+              <view class='avatar-wrap'>
+                <view class='avatar-cont'>
+                  <image src='../../images/20180727085026_80456.jpg'></image>
+                </view>
+              </view>
+              <view class='recom-bottom'>
+                <view class='recom-title'>
+                  <text class='text-ellipsis'>【新思维表达启蒙课】</text>
+                </view>
+                <view class='recom-desc clear'>
+                  <text class='recom-price'>￥9.9<!--text class='orig-price'>￥999</text--> </text>
+                  <text class='recom-people'>已有221人报名</text>
+                </view>
+                <view class='recom-btn'>
+                  <view class='recom-btn-cont'>
+                    <text>立即报名</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+              <view class='recom-item'>
+              <view class='recom-item-img'>
+                <image src="https://www.z4a.net/images/2019/06/10/356.jpg" class="slide-image" width="100%" height="100%"/>
+              </view>
+              <view class='avatar-wrap'>
+                <view class='avatar-cont'>
+                  <image src='../../images/2394847175.jpg'></image>
+                </view>
+              </view>
+              <view class='recom-bottom'>
+                <view class='recom-title'>
+                  <text class='text-ellipsis'>【戏剧表演启蒙课】</text>
+                </view>
+                <view class='recom-desc clear'>
+                  <text class='recom-price'>￥19.9<!--text class='orig-price'>￥999</text--> </text>
+                  <text class='recom-people'>已有221人报名</text>
+                </view>
+                <view class='recom-btn'>
+                  <view class='recom-btn-cont'>
+                    <text>立即报名</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </swiper-item>
+      </swiper>
+
+        
+      </view>
+    </view>
+    <!--版块-end-->
+    <view class='mb-notice mb-block border-radius'>
+      <view class='block-top clear'>
+        <text class='block-title'>萌校公告</text>
+        <navigator class='more' url="../article/article?field=notice">
+          <text >查看更多></text>
+        </navigator>
+      </view>
+      <!--item--star-->
+      <view class='plate-cont'>
+        <block wx:for='{{mbData.notice}}' wx:for-item='NoticeItem' >
+        <navigator url="../details/details?field=notice&articleId={{index}}">
+          <view class='plate-item notice-plate' data-pageid='{{NoticeItem.id}}' wx:if='{{NoticeItem.type == "-1"}}'>
+              <view class='item-wrap' data-details='{{}}' >
+                  <view class='notice-images'>
+                    <image src='{{NoticeItem.coverimg}}'></image>
+                  </view>
+                  <view class='right-cont'>
+                    <view class='notice-titwrap'>
+                      <image class='icon-notice' src='../../images/icon-notice.png'></image>
+                      <text class='item-title notice-title text-ellipsis'>{{NoticeItem.title}}</text>
+                    </view>
+                    <view class='notice-summary'>
+                      <text class='item-summary'>{{NoticeItem.describe}}</text>
+                    </view>
+                  </view>
+                </view>
+              <!---first-cont-end-->
+              <view class='item-bottom'>
+                  <view class='lis'><i-icon type="browse" /><text>{{NoticeItem.readnumber}}</text></view>
+                  <view class='lis'><i-icon type="praise" /><text>{{NoticeItem.praisenumber}}</text></view>
+                  <view class='lis'><i-icon type="time" /><text>{{NoticeItem.releasetime}}</text></view>
+              </view>
+          </view>
+          <!---first-item-end-->
+          <view wx:else class='plate-item item-wrap ietm-center'data-pageid='{{NoticeItem.id}}'>
+              <view class='item-order'>
+                <text class='oder-num'>{{index+1}}</text>
+              </view>
+              <view class='item-cont'>
+                <view class='title-wrap'>
+                  <text class='item-title comm-title text-ellipsis'>{{NoticeItem.title}}</text>
+                  <text class='item-timer '>1天前</text>
+                </view>
+                <text class='item-summary comm-summary text-ellipsis' >{{NoticeItem.describe}}</text>
+              </view>
+          </view>
+          </navigator> 
+        </block>
+        <!--view class='plate-item item-wrap ietm-center'>
+            <view class='item-order'>
+              <text class='oder-num'>3</text>
+            </view>
+            <view class='item-cont'>
+              <view class='title-wrap'>
+                 <text class='item-title comm-title text-ellipsis'>萌校宝小程序开始设计稿图制作</text>
+                 <text class='item-timer '>3天前</text>
+              </view>
+              <text class='item-summary comm-summary text-ellipsis' >萌校宝教育类小程序制作计划开始，设计稿，设计图均在设计制作中</text>
+            </view>
+        </view-->
+        <!---thr-item-end-->
+      </view>
+    </view>
+    <!--公告版块-end-->
+    <view class='mb-notice mb-block border-radius'>
+      <view class='block-top clear'>
+        <text class='block-title'>萌校新闻</text>
+        <navigator class='more' url="../article/article?field=news">
+          <text >查看更多></text>
+        </navigator>
+      </view>
+      <view class='plate-cont'>
+        <block wx:for='{{mbData.news}}' wx:for-item='NewsItem'>
+        <navigator url="../details/details?field=news&articleId={{index}}">
+          <view class='plate-item new-fir-item' wx:if='{{NewsItem.type == "-1"}}' data-pageid='{{NewsItem.id}}'>
+            <image class='new-fir-img' src='{{NewsItem.coverimg}}'></image>
+            <view class='new-fir-cont'>
+            <view class='icon-fir-new'>
+              <image class='icon-new' src='../../images/icon-new.png'></image>
+            </view>
+            <view class='new-fir-title '>
+                <text class='text-ellipsis'>{{NewsItem.title}}</text>
+            </view>
+            <view class='new-fir-timer'>
+                <text>2019年06月08日 20:00</text>
+            </view>
+            </view>
+          </view>
+          <!--first--item--end-->
+          <view class='plate-item item-wrap ietm-center' wx:else data-pageid='{{NewsItem.id}}'>
+              <view class='item-order'>
+                <text class='oder-num'>{{index+1}}</text>
+              </view>
+              <view class='item-cont'>
+                <view class='title-wrap'>
+                  <text class='item-title comm-title text-ellipsis'>{{NewsItem.title}}</text>
+                  <text class='item-timer '>3天前</text>
+                </view>
+                <text class='item-summary comm-summary text-ellipsis' >{{NewsItem.describe}}</text>
+              </view>
+          </view>
+        </navigator>
+        </block>
+        <!--view class='plate-item item-wrap ietm-center' >
+              <view class='item-order'>
+                <text class='oder-num'>3</text>
+              </view>
+              <view class='item-cont'>
+                <view class='title-wrap'>
+                  <text class='item-title comm-title text-ellipsis'>【荣耀时刻】萌校教育学生毕业典礼</text>
+                  <text class='item-timer '>1个月前</text>
+                </view>
+                <text class='item-summary comm-summary text-ellipsis' >萌校艺术教育，学生毕业典礼精彩时刻，节目不断，精彩不断，全程直播看孩子们的花式表演</text>
+              </view>
+        </view-->
+        <!---thr-item-end-->
+      </view>
+    </view>
+    <!--新闻版块结束-->
+    <view class='mb-copy'>
+      <text>一点新作 | 技术支持</text>
+    </view>
+    <view>
+      <i-toast id="toast" />
+    </view>
+</view>

@@ -1,0 +1,172 @@
+<!--pages/trends/tabDiary/tabDiary.wxml-->
+<!--
+  name:萌校宝
+  author：一点新作
+  page:tabDiary
+-->
+<view class='addRrl-mid-wrap'>
+    <view class='list-item wrap'>
+        <view class='item-user-top'>
+            <view class='list user-top-avatar'>
+                <image class='user-avatar' src='../../../images/20190427_avatar.jpeg'></image>
+                <image class='user-sex' src='../../../images/icon-female.png'></image>
+            </view>
+            <view class='list user-top-nickname'>
+                <view class='user-nickname'>
+                    <text>妍希外婆（戏剧学课）</text>
+                </view>
+                <view class='user-time'>
+                    <text>2小时前 - 已坚持12天 - 99次浏览</text>
+                </view>
+            </view>
+            <view class='list user-top-oper'>
+                <view class='set-top'>顶置</view>
+                <view class='icon-oper' wx:if='false'></view>
+            </view>
+        </view>
+        <view class='item-user-cont'>
+            <view class='user-add-cont'>
+                <view class='user-add-text'>
+                    <text>主持课练习发声...</text>
+                </view>
+                <video objectFit='cover' show-center-play-btn = true  src=''></video>
+            </view>
+            <view class='oper-btn'>
+                <view class='btn heart active'><i-icon type="praise" />赞</view>
+                <view class='btn review'><i-icon type="interactive" />评论</view>
+                <view class='btn praise'><button open-type='share'> <i-icon type="send" />分享</button></view>
+                <view class='btn share'><i-icon type="message" />点评</view>
+            </view>
+            <view class='praise-wrap'>
+                <view class='praise-pel-infor'>
+                    <view class='pel-infor-avatar'>
+                        <image src='../../../images/20180727085026_80456.jpg'></image>
+                    </view>
+                    <view class='pel-infor-nickname'>
+                        <view class='user-nickname pel-nickname'>
+                            <text>橘子老师（戏剧学课）</text>
+                        </view>
+                        <view class='user-time'>
+                            <text>2019-04-28 06:35:52</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='parise-cont'>
+                    <!--点评-->
+                    <view class='parise-cont-keywords'>
+                      <view class='keywords'>
+                        <text>状态</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>声音</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>字音</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>站资</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='parise-text'>
+                          <text>评语：</text>
+                          <text>清晰度还不错，站资站好了，但是没有站稳，还是有点小动作乱动，微笑很好，每个练习都要保持微笑哈。
+                          </text>
+                      </view>
+                      <view class='parise-cont-mark'>
+                          <text>评分：</text>
+                          <i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' />
+                          <text>9分</text>
+                      </view>
+                    </view>
+                    
+                </view>
+            </view>
+            <!--点评区end-->
+            <view class='pel-heart'>
+                <i-icon type="like" />
+                <text>澜澜老师（戏剧表演学科）,球球老师（戏剧学科）</text>
+            </view>
+        </view>
+    </view>
+    <!--显示的项目list-->
+    <view class='list-item wrap'>
+        <view class='item-user-top'>
+            <view class='list user-top-avatar'>
+                <image class='user-avatar' src='../../../images/20190427_avatar.jpeg'></image>
+                <image class='user-sex' src='../../../images/icon-female.png'></image>
+            </view>
+            <view class='list user-top-nickname'>
+                <view class='user-nickname'>
+                    <text>小宝外婆（戏剧学课）</text>
+                </view>
+                <view class='user-time'>
+                    <text>12小时前 - 已坚持6天 - 36次浏览</text>
+                </view>
+            </view>
+            <view class='list user-top-oper'>
+                <view class='set-top'>顶置</view>
+                <view class='icon-oper'></view>
+            </view>
+        </view>
+        <view class='item-user-cont'>
+            <view class='user-add-cont'>
+                <text>奔跑吧...</text>
+                <video objectFit='cover' show-center-play-btn = true src=''></video>
+            </view>
+            <view class='oper-btn'>
+                <view class='btn heart active'><i-icon type="praise" />赞</view>
+                <view class='btn review'><i-icon type="interactive" />评论</view>
+                <view class='btn praise'><button open-type='share'><i-icon type="send" />分享</button></view>
+                <view class='btn share'><i-icon type="message" />点评</view>
+            </view>
+            <view class='praise-wrap'>
+                <view class='praise-pel-infor'>
+                    <view class='pel-infor-avatar'>
+                        <image src='../../../images/20180727085026_80456.jpg'></image>
+                    </view>
+                    <view class='pel-infor-nickname'>
+                        <view class='user-nickname pel-nickname'>
+                            <text>橘子老师（戏剧学课）</text>
+                        </view>
+                        <view class='user-time'>
+                            <text>2019-04-28 06:35:52</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='parise-cont'>
+                    <!--点评-->
+                    <view class='parise-cont-keywords'>
+                      <view class='keywords'>
+                        <text>状态</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>声音</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>字音</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='keywords'>
+                        <text>站资</text><i-icon type="right" color='#8B7355' />
+                      </view>
+                      <view class='parise-text'>
+                          <text>评语：</text>
+                          <text>清晰度还不错，站资站好了，但是没有站稳，还是有点小动作乱动，微笑很好，每个练习都要保持微笑哈。
+                          </text>
+                      </view>
+                      <view class='parise-cont-mark'>
+                          <text>评分：</text>
+                          <i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' /><i-icon type="collection_fill" color='#fe8d55' />
+                          <text>9分</text>
+                      </view>
+                    </view>
+                    
+                </view>
+            </view>
+            <!--点评区end-->
+            <view class='pel-heart'>
+                <i-icon type="like" />
+                <text>澜澜老师（戏剧表演学科）,球球老师（戏剧学科）</text>
+            </view>
+        </view>
+    </view>
+</view>
+

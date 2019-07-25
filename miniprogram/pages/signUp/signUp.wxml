@@ -1,0 +1,46 @@
+<!--pages/signUp/signUp.wxml-->
+<!--萌校报名-->
+<authorize-modal  id='authorize-modal' bind:authorizeUserInfo='getUserInfo' />
+<view class='signUp-wrap' bindtap='elementFun'>
+    <view class='signUp-bnner wrap'>
+      <view class='banner-wrap'>
+        <image mode="widthFix"  src='{{signData.coverimage}}'></image>
+      </view>
+      <view class='from-wrap'>
+        <form class='from' action='' method='post'>
+          <view class='inpItem'>
+            <label for='username'>姓名：</label>
+            <input type='text' name='username' id='username' value='' placeholder='请输入您的姓名' bindblur='getinptValue' placeholder-class='placehholderStyle'></input>
+          </view>
+          <view class='inpItem'>
+            <label for='usertel'>电话：</label>
+            <input type='number' name='usertel' id='usertel' value='' placeholder='请输入电话号码' bindblur='getinptValue' placeholder-class='placehholderStyle' confirm-type='done'></input>
+          </view>
+          <view class='inpItem select-wrap'>
+            <label for='userclass'>报名课程：</label>
+            <view class="select {{isSelectshow?'active':''}}" catchtap='selectListshow'>
+              <text class='selectValue'>{{selectOption}}</text>
+              <view class='list-cont'wx:if='{{isSelectshow}}'>
+                <text wx:for='{{signData.name}}' wx:for-item='selectItem' wx:for-key='index' wx:if='{{signData.name}}' active-class='listActive' class="selectItem {{listActiveid == index?listActive:''}}"   id='userclass' data-selectValue='{{selectItem.name}}' bindblur='getinptValue' data-selectId='{{selectItem.id}}'  bindtap='_selectOption'>{{selectItem.name?selectItem.name:signData.name}}</text>
+              </view>
+              
+            </view>
+          </view>
+          <view class='inpItem'>
+            <label></label>
+            <button class='signUp-btn' bindtap='formActionsend'>预约报名</button>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class='signUp-descable wrap'>
+      <text class='title'>报名说明:</text>
+      <view class='cont'>
+          <text wx:for='{{signData.explain}}' wx:for-item='list'>{{(index+1)+". "+list}}</text>  
+      </view>
+      <text class='descable'>本说明归{{mbData.schoolInfo.name}}解释</text>
+    </view>
+    <view>
+      <i-toast id="toast" />
+    </view>
+</view>

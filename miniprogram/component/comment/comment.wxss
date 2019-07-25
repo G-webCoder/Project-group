@@ -1,0 +1,191 @@
+/* miniprogram/component/comment/comment.wxss */
+.comment-wrap{
+  padding-bottom: 39px;
+}
+.comment-title{
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+.list-top{
+  font-size: 0;
+}
+.list-top-l{
+  display: inline-block;
+}
+.avatar{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.avatar image{
+  border-radius: 50%;
+}
+.avatar,.right{
+  display: inline-block;
+  vertical-align: middle;
+}
+right .name{
+  font-weight: 700;
+}
+.right .timer{
+  font-size: 10px;
+  color: #b4b2b3;
+  margin-left: 10px;
+}
+.list-cont{
+  padding: 5px 10px 20px 0;
+  margin-left: 34px;
+}
+.right text,.list-cont text{
+  font-size: 12px;
+}
+.replay-wrap{
+  padding:3px 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #F4F4F4;
+}
+.replayList{
+  font-size: 0;
+  padding: 5px 0;
+}
+.replayList text{
+  font-size: 12px;
+  line-height: 16px;
+}
+.replay-nickname{
+  font-weight: 700;
+}
+/***输入框**/
+.commenr-contInp{
+  width: 100%;
+  height: 39px;
+  padding: 6px 15px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #e9eaec;
+}
+.inp-frame{
+  display: table;
+  width: 265rpx;
+  height: 27px;
+  border-radius: 8px;
+  background-color: white;
+  text-align: left;
+  padding: 0 10px;
+}
+.point{
+  display: table-cell;
+  font-size: 12px;
+  line-height: 27px;
+  color: #b4b2b3;
+  vertical-align: middle;
+}
+.inp-frame,.message,.praise,.collection,.return{
+  position: relative;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align:top;
+}
+.message,.praise,.collection,.return{
+  height: 27px;
+  line-height: 27px;
+}
+.return{
+  
+}
+.r-num{
+  height: 14px;
+  line-height: 14px;
+  position: absolute;
+  top: 0;
+  left: 18px;
+  display: inline-block;
+  padding: 0 4px;
+  background-color: #f00;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.edit-wrap{
+  width: 100%;
+  background-color: #e9eaec;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+}
+.edit-top-btn{
+  width: 100%;
+  position: relative;
+  top: 0;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e6;
+}
+.edit-top-btn::after{
+  display: block;
+  content: '';
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.cancel{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  font-size: 12px;
+  z-index: 9999;
+}
+.sure{
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+  color: #f00;
+  z-index: 9999;
+}
+.cent-title{
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  font-size: 12px;
+  text-align: center;
+}
+.inp-numer-point{
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
+  margin-right: 10px;
+}
+.point-number{
+  font-size: 10px;
+  color: #b4b2b3;
+}
+
+.inp-numer-point .point-active{
+  color: #f00;
+}
+
+.inpText{
+  width: 100%;
+  height: 86px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: rgb(73, 73, 73);
+  background-color:white;
+}
+.inpText::placeholder{
+  font-size: 14px;
+  color: #b4b2b3;
+}

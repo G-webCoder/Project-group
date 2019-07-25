@@ -1,0 +1,13 @@
+{
+  "component":true,
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 30,
+  "navigationBarTitleText":"萌校宝MB",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-toast": "../../dist/toast/index",
+    "mb-datarequest":"../../component/request/request"
+  }
+  
+}

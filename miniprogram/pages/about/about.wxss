@@ -1,0 +1,90 @@
+.app-about{
+  margin: 0 auto;
+  padding:0 10px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+.about-top{
+  padding: 15px 0;
+  border-bottom: 1px dashed #e9eaec;
+}
+.top-wrap{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.top-logo{
+  flex: 0 0 62px;
+  width: 72px;
+  height: 54px;
+}
+.top-logo image{
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+.top-title{
+  display: inline-block;
+  flex: 1;
+}
+.top-title text{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.tit-cont{
+  font-weight: 700;
+}
+.descable{
+  margin-top:5px;
+}
+.sub-tit{
+  font-size: 12px;
+  color: #b4b2b3;
+}
+.top-right{
+ flex: 0 0 64px;
+ text-align: center;
+}
+.top-right image{
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+}
+.top-right text{
+  font-size: 12px;
+  line-height: 16px;
+  color: #b4b2b3;
+}
+.loca-icon,.loca-title{
+  display: inline-block;
+}
+.list-cell{
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+}
+.list-cell .list-tit{
+  padding-left:5px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.detail-wrap{
+  padding: .5rem 0;
+  overflow: hidden;
+}
+.detail-wrap image{
+  width: 100%;
+}
+.detail-wrap video{
+  width: 100%;
+  height: 10.6rem;
+}

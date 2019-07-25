@@ -1,0 +1,3 @@
+<!--component/request/request.wxml-->
+<config id='config' />
+<i-toast id="toast" />

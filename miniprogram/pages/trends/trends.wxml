@@ -1,0 +1,26 @@
+<!--miniprogram/pages/trends/trends.wxml-->
+<!--动态-->
+<view class='container'>
+      <view class='addRel-cont-wrap'>
+            <view class='addRel-top-wrap'>
+                <block wx:for="{{topTab}}" wx:for-item="tabItem" wx:key="{{tabItem.id}}">
+                  <view class="{{tabItem.isSelect?'top-tab-item active':'top-tab-item'}}" bindtap="onIpItemClick" wx:key="{{tabItem.id}}" data-item="{{tabItem}}">
+                     <text>{{tabItem.title}}</text>
+                  </view>
+                </block>
+            </view>
+            <!--添加到桌面提示框-->
+            <import src='../common/common.wxml' />
+            <template is='addDesktop' />
+            <view wx:if='{{currentTab == 0}}'>
+                <tabDiary/>
+            </view>
+            <view wx:if='{{currentTab == 1}}'>
+                <tabThr/>
+            </view>
+            <view wx:if='{{currentTab == 2}}'>
+                <tabFour/>
+            </view>
+     </view>
+</view>
+

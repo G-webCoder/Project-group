@@ -1,0 +1,59 @@
+/* miniprogram/pages/common/common.wxss */
+.addDesktop-wrap{
+  width: 124px;
+  height: 35px;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  z-index: 9999;
+  padding: 10px 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .5);
+  animation: DesktopMove 15s linear 10s;
+  opacity: 0;
+  visibility: hidden;
+}
+.addDesktop-wrap text{
+  font-size: 11px;
+  line-height: 18px;
+  color: white;
+}
+.addDesktop-wrap::before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  right:68px;
+  top: -16px;
+  width: 0px;
+  height: 0px;
+  border: 8px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, .5);
+  background: transparent;
+
+}
+@keyframes DesktopMove{
+  0%{
+      left: 0;
+      right: initial;
+      visibility: hidden;
+      opacity: 1;
+  }
+  20%{
+      display: block;
+      opacity: 1;
+      left: 100%;
+      transform: translateX(-100%)
+  }
+  70%{
+  }
+  80%{
+  }
+  90%{
+  }
+  100%{
+      opacity: 1;
+      left: 100%;
+      transform: translateX(-100%);
+      visibility: visible;
+  }
+}

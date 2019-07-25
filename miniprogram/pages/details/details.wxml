@@ -1,0 +1,51 @@
+<!--miniprogram/pages/details/details.wxml-->
+<!---article-details-->
+<view class='container' wx:if='{{articleDetails.id}}'>
+  <view class='details-wrap wrap'>
+    <view class='details-title'>
+      <text>{{articleDetails.title}}</text>
+    </view>
+    <view class='details-funct'>
+      <view class='author'>
+        <text>作者：{{articleDetails.author}}</text>
+      </view>
+      <view class='timer'>
+        <i-icon type="time" />
+        <text>{{articleDetails.releasetime}}</text>
+      </view>
+      <view class='read'>
+        <i-icon type="browse" />
+        <text>{{articleDetails.readnumber}}</text>
+      </view>
+    </view>
+    <view class='details-cont'>
+      <text>{{articleDetails.describe}}</text>
+      <image mode="widthFix" src='{{articleDetails.coverimg}}'></image>
+    </view>
+    <view class='details-bottom'>
+      <text>评论：{{articleDetails.ratings.length}}</text>
+    </view>
+  </view>
+  <view class='details-comment wrap'>
+    <view class='comment-title'>
+      <text>精选评论</text>
+    </view>
+    <!--block>
+      <view class='comment-list' wx:for='{{articleDetails.ratings}}' wx:for-item='commentItem'>
+          <view class='list-top'>
+              <view class='avatar'>
+                  <image src='{{commentItem.avatar}}'></image>
+              </view>
+              <view class='right'>
+                <text class='name'>{{commentItem.username}}</text>
+                <text class='timer'>{{commentItem.timer}}</text>
+              </view>
+          </view>
+          <view class='list-cont'>
+              <text>{{commentItem.content}}</text>
+          </view>
+      </view>
+    </block-->
+    <comment ratings = '{{articleDetails.ratings}}' />
+  </view>
+</view>

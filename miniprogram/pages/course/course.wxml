@@ -1,0 +1,41 @@
+<!--pages/course/course.wxml-->
+<!---萌校宝-课程页（CoursePages）author:一点新作-->
+<view class='container'>
+  <view class='course-top'>
+    <view class='course-banner'>
+      <image src='../../images/course_banner.jpg'></image>
+    </view>
+  </view>
+  <view class='course-wrap wrap'>
+    <view class='course-title'>
+      <text>- 萌校课程 -</text>
+    </view>
+    <view class='course-cont'>
+       <view class='course-list'>
+        <image src='../../images/tixi_1.png'></image>
+        <view class='list-text'>
+          <text class='title text-ellipsis'>戏剧表演课</text>
+          <text class='descable clamp-ellipsis'>提高孩子行为、语言的多元化表达的赛场上DVD发但是v但是v的赛场上v的是vSava v</text>
+          <view class='list-bottom clear'>
+            <text class='price'>￥999.00</text>
+            <text class='course-timer'>32课时</text>
+          </view>
+        </view>
+      </view>
+        <view class='course-list'>
+        <image src='../../images/tixi_1.png'></image>
+        <view class='list-text'>
+          <text class='title text-ellipsis'>戏剧表演课</text>
+          <text class='descable clamp-ellipsis'>提高孩子行为、语言的多元化表达的赛场上DVD发但是v但是v的赛场上v的是vSava v</text>
+          <view class='list-bottom clear'>
+            <text class='price'>￥999.00</text>
+            <text class='course-timer'>32课时</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='mb-copy'>
+      <text>一点新作 | 技术支持</text>
+    </view>
+</view>

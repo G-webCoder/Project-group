@@ -1,0 +1,27 @@
+<!--component/btn-modal/btn-modal.wxml-->
+   <view class='login-mask' wx:if='{{loginwindow}}' catchtouchmove='move'>
+      <view class='loginwin-wrap'>
+          <view class='loginwin-cont wrap'>
+            <view class='loginwin-title'>
+                <i-icon wx:if='{{loginFail}}' type="prompt_fill" size='20' color='#f00' />
+                <text>{{pointText}}</text>
+            </view>
+            <view class='loginwin-descable'>
+                <text>为了更好的提供服务</text> 
+                <text>请在稍后的提示框中点击“允许”</text>
+                <view>
+                    <image ></image>
+                </view>
+            </view>
+            <view class="btn-wrap">
+                <view class='cancel' bindtap='closeLogin'>
+                    <text>拒绝</text>
+                </view>
+                <view class='sure'>
+                    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"><text>去授权</text></button> 
+                </view>
+            </view>
+          </view>
+      </view>
+      <slot></slot>
+   </view>

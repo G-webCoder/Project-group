@@ -1,0 +1,31 @@
+/* miniprogram/pages/my/my.wxss */
+.input-emjo{
+  width: 200px;
+  height: 24px;
+  border:1px solid #f00;
+}
+.emoji_d{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+}
+.emoji_d image{
+  width: 100%;
+  height: 100%;
+}
+.send-cont{
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.send-btn{
+  width: 45px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: #f00;
+}
+.send-btn text{
+  color:white;
+}

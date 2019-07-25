@@ -1,0 +1,58 @@
+<!--about.wxml-->
+<view class="container">
+  <scroll-view>
+        <view class='app-about'>
+          <!-- wxml-top--->
+          <view class='about-top'>
+             <view class='top-wrap'>
+                <view class='top-logo'>
+                    <image src='../../images/huaqinduo.png'></image>
+                </view>
+                <view class='top-title'>
+                    <text class='tit-cont'>萌校宝艺术教育资讯</text>
+                    <view class='descable'>
+                        <i-icon type="coordinates" color='#b4b2b3' />
+                        <text class='sub-tit'>距离我 {{gap}}km</text>
+                    </view>
+                </view>
+                <view class='top-right'>
+                    <button class='contact-btn' open-type='contact'>
+                        <image src='../../images/icon-weixin-chart.png'></image>
+                        <text>联系我们</text>
+                    </button>
+                </view>
+             </view>
+          </view>
+          <!-- wxml-end -->
+          <view class='about-mid'>
+            <view class='list-wrap'>
+                <view class='list-cell list-news clear' bindtap="openLocation">
+                    <view class='left'>
+                      <i-icon type="coordinates" color='#b4b2b3' />
+                      <text class='list-tit'>{{enterName}}</text>
+                    </view>
+                    <i-icon class='right' type="enter" color='#b4b2b3' />
+                </view>
+                <view class='list-cell list-news clear' bindtap="PoneCall">
+                    <view class='left'>
+                      <i-icon type="mobilephone" color='#b4b2b3' />
+                      <text class='list-tit'>{{tell}}</text>
+                    </view>
+                    <i-icon class='right' type="enter" color='#b4b2b3' />
+                </view>
+                <!--详情介绍-->
+                <view class='list-cell'>
+                    <i-icon type="dynamic" color='#b4b2b3' />
+                    <text class='list-tit'>教育宣传</text>
+                    <view class='detail-wrap'>
+                        <video autoplay='true' show-fullscreen-btn='true' show-center-play-btn='true'src='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400' poster='../../images/tent.png'></video>
+                    
+                    <image mode='widthFix' src='https://www.z4a.net/images/2019/06/10/bc8c-hcwpcmq7443970.jpg'></image>
+                    <image mode='widthFix'  src='../../images/index_05.jpg'></image>
+                    </view>
+                </view>
+            </view>
+          </view>
+        </view>
+    </scroll-view>
+</view> 

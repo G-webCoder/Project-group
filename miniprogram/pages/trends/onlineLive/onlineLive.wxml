@@ -1,0 +1,75 @@
+<!--miniprogram/pages/index/tabFour/tabFour.wxml-->
+<view class='container'>
+    <!--直播-->
+    <view class='live-wrap'>
+         <!---广告位-->
+        <view class='live-poser'>
+            <image src='https://www.z4a.net/images/2019/06/10/bc8c-hcwpcmq7443970.jpg'></image>
+        </view>
+        <!--推荐直播-->
+        <view class='live-item hot-item wrap' wx:key="{{live[0].id}}">
+            <view class='live-title'>
+                <text class='clum-title'>推荐直播</text>
+            </view>
+            <view class='live-cont'>
+                <view class='hot-icon'>
+                    <image src='../../../images/liveHot_img.png'></image>
+                </view>
+                <view class='live-video'>
+                  <view class='mask-box'>
+                    <view class='center'>
+                      <view class='icon'>
+                        <image src='../../../images/linux-live.c1ff3138.gif'></image>
+                      </view>
+                      <text>正在直播...</text>
+                    </view>
+                  </view>
+                  <view class='cont'>
+                    <view class='title'>
+                      <text class='text-ellipsis'>萌校开课啦！领跑微信小程序开发11111111111111111111111111111111111111111111111111111111111111</text>
+                    </view>
+                    <view class='descable'>
+                      <text>332人正在观看，快进来吧!</text>
+                    </view>
+                  </view>
+                  <view class='video-cont'>
+                    <image src='https://www.z4a.net/images/2019/06/10/356.jpg'></image>
+                  </view>
+                </view>
+            </view>
+            <!--其他直播列表-->
+            <view class='live-cont list-wrap'>
+                <view class='live-list-cont'>
+                    <block wx:for="{{live}}">
+                        <view class='live-list-item'>
+                            <view class='live-video'>
+                              <view class='mask-box'>
+                                <view class='center'>
+                                  <view class='icon'>
+                                    <image src='../../../images/linux-live.c1ff3138.gif'></image>
+                                  </view>
+                                  <text wx:if="{{status}}">正在直播...</text>
+                                  <text wx:else>直播未开始</text>
+                                </view>
+                              </view>
+                              <view class='cont'>
+                                <view class='title'>
+                                  <text class='text-ellipsis'>{{item.title}}</text>
+                                </view>
+                                <view class='descable'>
+                                  <text>332</text><i-icon type="browse" color='white' />
+                                </view>
+                              </view>
+                              <view class='video-cont'>
+                                <image src='{{item.coverImg}}'></image>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <!---广告位-->
+        
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "inp-modal":"../../component/inp-modal/modal"
+  }
+  
+}
